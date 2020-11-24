@@ -32,7 +32,7 @@ class _ShulteCheckState extends State<ShulteCheck>
   //存放数值的列表
   List<int> data = List<int>();
 
-  //当前点击的数值的列表,存放顺序
+  //存放当前点击的数值的列表,存放顺序
   List<int> curSel = List<int>();
 
   //动画 controller
@@ -69,7 +69,7 @@ class _ShulteCheckState extends State<ShulteCheck>
     //获取最后点击的数字
     int lastCell = curSel.length > 0 ? curSel.last : 0;
     //验证是否点击过之前点击的数字 ，
-    //data[i] -1 当前点击的数字 -1 就是之前点击的数字
+    //data[i] -1 当前点击的数字 ，-1 就是之前点击的数字
     if (data[i] - 1 == lastCell) {
       //正确
       animations[i] = ColorTween(begin: Colors.white, end: Colors.purpleAccent)
